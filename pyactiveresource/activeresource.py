@@ -534,7 +534,7 @@ class ActiveResource(object):
             A string containing the encoded query.
         """
         if query_options:
-            return '?' + urllib.urlencode(query_options, True)
+            return '?' + util.urlencode(query_options, True, encoding='utf-8')
         else:
             return ''
 
